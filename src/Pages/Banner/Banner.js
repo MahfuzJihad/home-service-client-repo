@@ -1,6 +1,6 @@
 import React from 'react';
 import img2 from '../../assests/images/house-service.jpg';
-import img3 from '../../assests/images/home-clean-1.jpg';
+import img3 from '../../assests/images/house-clean.jpg';
 import img4 from '../../assests/images/car-clean.jpg';
 import img5 from '../../assests/images/homerepair.jpg';
 
