@@ -5,7 +5,7 @@ import image from '../../assests/logo.png';
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-primary text-primary-content bg-base-120 pb-4">
                 <div className="navbar-start">
 
                     <Link to="/" className="btn btn-ghost normal-case text-xl">
