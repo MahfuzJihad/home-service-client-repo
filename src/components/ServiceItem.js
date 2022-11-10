@@ -8,7 +8,7 @@ function ServiceItem(props) {
                 <h2 className="card-title">{props.title}</h2>
                 <p>{props.name}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Buy Now</button>
+                    <button className="btn btn-primary">View details</button>
                 </div>
             </div>
         </div>

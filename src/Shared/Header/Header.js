@@ -9,7 +9,7 @@ const Header = () => {
                 <div className="navbar-start">
 
                     <Link to="/" className="btn btn-ghost normal-case text-xl">
-                        <img src={image} alt="" />
+                        <img src={image} alt="" /> <p>HomeHut</p>
                     </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
