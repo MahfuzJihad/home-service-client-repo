@@ -5,6 +5,9 @@ import img4 from '../../assests/images/car-clean.jpg';
 import img5 from '../../assests/images/homerepair.jpg';
 
 const Banner = () => {
+
+
+
     return (
         <div className="carousel w-full mt-10">
             <div id="slide1" className="carousel-item relative w-full">
