@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContex } from '../../AuthProvider/AuthProvider';
 
@@ -9,6 +9,9 @@ import { AuthContex } from '../../AuthProvider/AuthProvider';
 const SignUp = () => {
     const { createUser } = useContext(AuthContex)
 
+    const [passwordError, setPasswordError] = useState('');
+    const [success, setSuccess] = useState(false);
+
     const handleSignup = event => {
         event.preventDefault();
 
@@ -16,12 +19,27 @@ const SignUp = () => {
         const password = event.target.password.value;
         console.log(email, password);
 
+        if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+            setPasswordError('Please provide at least two uppercase');
+            return;
+        }
+        if (password.length < 6) {
+            setPasswordError('Please should be at least 6 characters');
+            return
+        }
+        setPasswordError('');
+
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                setSuccess(true);
             })
-            .catch(err => console.log(err));
+            .catch(error => {
+                console.error('error', error);
+                setPasswordError(error.message);
+            });
+
     }
 
     // const handleEmailBlur = event => {
@@ -67,6 +85,8 @@ const SignUp = () => {
 
                         </div>
                     </form>
+                    <p className='text-center text-red-600'>{passwordError}</p> <br />
+                    {success && <p className='text-green-600 text-center'>User Create Succeccfully.</p>}
                     <p className='text-center'>Already have an account! <Link className='text-orange-600 font-bold' to="/login">Login</Link></p>
                 </div>
             </div>
