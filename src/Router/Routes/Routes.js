@@ -2,6 +2,7 @@ import Blog from "../../components/Blog";
 import ServicePage from "../../components/ServicePage";
 import Main from "../../Layout/Main";
 import Home from "../../Pages/Home/Home";
+import Loggoogle from "../../Pages/Loggoogle";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
+            },
+            {
+                path: '/google',
+                element: <Loggoogle></Loggoogle>
             }
         ]
 
