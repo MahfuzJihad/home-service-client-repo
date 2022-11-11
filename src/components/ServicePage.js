@@ -18,7 +18,7 @@ function ServicePage() {
             <div className="mb-4">
                 <p className="text-center font-bold">All services here...</p>
             </div>
-            <div className="flex">
+            <div className="grid grid-cols-3">
                 {services.map((service) => (
                     <ServiceItem title={service.title} name={service.name} imageUrl={service.imageUrl} />
                 ))}
