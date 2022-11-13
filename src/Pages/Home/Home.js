@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import ServiceItem from '../../components/ServiceItem';
 
 import Banner from '../Banner/Banner';
@@ -35,7 +35,7 @@ const Home = () => {
             {/* <h1>Breakpoint</h1>
             <ServicePage /> */}
 
-            {/* <button onClick={seeMoreServiceBtnHandler} className="btn btn-wide btn-active btn-primary mb-10">See more service</button> */}
+            <button onClick={seeMoreServiceBtnHandler} className="btn btn-wide btn-active btn-primary mb-10">See more service</button>
         </div>
     );
 };
