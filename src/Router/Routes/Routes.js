@@ -5,6 +5,7 @@ import Home from "../../Pages/Home/Home";
 import Loggoogle from "../../Pages/Loggoogle";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
+import ServiceDetails from "../../components/ServiceDetails";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -16,10 +17,15 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+                
             },
             {
                 path: '/servicepage',
                 element: <ServicePage></ServicePage>
+            },
+            {
+                path: '/service/:id',
+                element: <ServiceDetails></ServiceDetails>
             },
             {
                 path: '/blog',
@@ -41,5 +47,6 @@ const router = createBrowserRouter([
 
     }
 ]);
+
 
 export default router;

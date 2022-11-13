@@ -10,7 +10,7 @@ const auth = getAuth(app);
 
 const Login = () => {
 
-    const { login } = useContext(AuthContex);
+    const { login, user } = useContext(AuthContex);
 
     const [success, setSuccess] = useState(false);
     const handleLogin = event => {
@@ -33,7 +33,7 @@ const Login = () => {
         login(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                
             })
             .then(error => console.log(error));
     }
