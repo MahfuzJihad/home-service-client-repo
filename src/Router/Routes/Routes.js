@@ -6,6 +6,7 @@ import Loggoogle from "../../Pages/Loggoogle";
 import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import ServiceDetails from "../../components/ServiceDetails";
+import AddService from "../../Pages/AddService/AddService";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: '/google',
                 element: <Loggoogle></Loggoogle>
+            },
+            {
+                path: '/addservice',
+                element: <AddService></AddService>
             }
         ]
 
