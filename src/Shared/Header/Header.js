@@ -46,7 +46,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href='/' className="btn">Get started</a>
+                    <a href='/' className="btn">Refresh</a>
                 </div>
             </div>
         </div>
