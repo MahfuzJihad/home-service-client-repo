@@ -7,6 +7,7 @@ import Login from "../../Pages/Login/Login";
 import SignUp from "../../Pages/SignUp/SignUp";
 import ServiceDetails from "../../components/ServiceDetails";
 import AddService from "../../Pages/AddService/AddService";
+import MyReview from "../../Pages/MyReview/MyReview";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
+                path: '/addservice',
+                element: <AddService></AddService>
+            },
+            {
                 path: '/login',
                 element: <Login></Login>
             },
@@ -41,13 +46,14 @@ const router = createBrowserRouter([
                 element: <SignUp></SignUp>
             },
             {
+                path:'/myreview',
+                element: <MyReview></MyReview>
+            },
+            {
                 path: '/google',
                 element: <Loggoogle></Loggoogle>
             },
-            {
-                path: '/addservice',
-                element: <AddService></AddService>
-            }
+           
         ]
 
     }

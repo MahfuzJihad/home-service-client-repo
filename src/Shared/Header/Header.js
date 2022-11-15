@@ -31,12 +31,15 @@ const Header = () => {
                                     <>
                                         <span> {user?.displayName}</span>
                                         <button onClick={handleLogOut}>Log out</button>
+                                        <Link to='/addservice'>Add service</Link>
+                                        <Link to='/myreview'>My Review</Link>
                                     </>
                                     :
                                     <>
                                         <Link to='/login'>Login</Link>
                                     </>
                             }
+                            
 
                         </Link></li>
 

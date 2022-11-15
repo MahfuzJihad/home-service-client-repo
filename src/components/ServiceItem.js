@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 
 function ServiceItem(props) {
@@ -9,7 +11,12 @@ function ServiceItem(props) {
   return (
     <div className="card w-96 bg-base-100 shadow-xl mb-10">
       <figure>
-        <img src={props.imageUrl} alt={props.title} />
+      <PhotoProvider>
+    <PhotoView src={props.imageUrl}>
+      <img src={props.imageUrl} alt={props.title} />
+    </PhotoView>
+  </PhotoProvider>
+        
       </figure>
       <div className="card-body">
         <h2 className="card-title">{props.title}</h2>
