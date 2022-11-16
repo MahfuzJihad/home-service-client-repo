@@ -21,7 +21,7 @@ function ServiceItem(props) {
       <div className="card-body">
         <h2 className="card-title">{props.title}</h2>
         <b>{props.name}</b>
-        <p>{props.details.substring(0, 120)}..</p>
+        <p>{props.details?.substring(0, 120)}..</p>
         <div className="card-actions justify-end">
           <button onClick={viewDetailsBtnHandler} className="btn btn-primary">View details</button>
         </div>
