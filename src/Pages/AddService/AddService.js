@@ -24,7 +24,7 @@ const AddServices = () => {
     };
 
     try {
-      fetch("http://localhost:8000/service", {
+      fetch(" https://home-service-server-mahfuzjihad.vercel.app/service", {
         method: "POST",
         body: JSON.stringify(service),
         headers: {

@@ -13,14 +13,14 @@ function ServiceDetails(props) {
   const reviewRef = useRef();
 
   const getAllReviews = () => {
-    fetch(`http://localhost:8000/reviews/${params.id}`)
+    fetch(`https://home-service-server-mahfuzjihad.vercel.app/reviews/${params.id}`)
       .then((respose) => respose.json())
       .then((data) => setReviews(data))
       .catch((err) => console.log(err));
   }
 
   const getSingleServiceData = () => {
-    fetch(`http://localhost:8000/service/${params.id}`)
+    fetch(`https://home-service-server-mahfuzjihad.vercel.app/service/${params.id}`)
       .then((respose) => respose.json())
       .then((data) => setService(data))
       .catch((err) => console.log(err));
@@ -42,7 +42,7 @@ function ServiceDetails(props) {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(review),
               };
-              fetch("http://localhost:8000/review", requestOptions)
+              fetch("https://home-service-server-mahfuzjihad.vercel.app/review", requestOptions)
                 .then((response) => response.json())
                 .then((data) => {
                     const updatedReviews = reviews.concat(review);

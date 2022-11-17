@@ -14,7 +14,7 @@ const Home = () => {
     }
 
     const getServiceData = () => {
-        fetch("http://localhost:8000/services/3")
+        fetch("https://home-service-server-mahfuzjihad.vercel.app/services/3")
             .then((res => res.json()))
             .then(services => setServices(services))
             .catch(err => console.log(err));
